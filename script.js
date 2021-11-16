@@ -11,5 +11,5 @@ console.log(nombre1)
 
 let numero3 = parseInt( prompt("Igrese un numero: "))
 let numero4 = parseInt( prompt("Ingrese un segundo numero: "))
-console.log(numero3+*numero4)
+console.log(numero3*numero4)
 
