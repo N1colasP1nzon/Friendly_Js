@@ -1,4 +1,154 @@
-let numero = parseInt (prompt("Igrese un numero: "))
+let repetir = true;
+let acumulador = 0;
+let cantidadNotas =0;
+
+while(repetir){
+    let nota = parseInt(prompt("Ingrese una nota "))
+    if(nota >=1 && nota <=10) {
+        acumulador +=  nota
+        cantidadNotas++;
+
+    } else{
+        alert("Nota no valida")
+    }
+    let continuar = prompt("desea ingresar otra nota?").toLowerCase()
+    
+    if(continuar == "no"){
+        repetir=false;
+    }
+}
+alert(`El promedio es ${acumulador / cantidadNotas}`)
+
+let ingreso =prompt("Ingrese un nombre")
+while(ingreso != "ESC"){
+    switch(ingreso){
+        case "Martin":
+            alert("Hola Martin");
+            break;
+        
+        case "Alejandro":
+            alert("Hola Martin");
+            break;
+
+        case "Julian":
+            alert("Hola Julian");
+            break;
+
+        default:
+            alert("Quien eres");
+            break;
+
+    }
+    ingreso = prompt("Ingresar un nombre");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let nombre = prompt("Ingrese su nombre:")
+while(nombre = "Nicolas")
+{
+switch(nombre)
+
+{
+    case "Julian":
+        alert("Hola Julian")
+        break
+
+    case "Alejandro":
+        alert("Hola  Alejandro")
+        break
+
+    case "Nicolas":
+        alert("Hola Nicolas")
+        break
+
+}
+}
+/* /* function su *//* mar(numero1, numero2){
+    console.log(numero1 + numero2)
+}
+sumar(1,4)
+sumar(5,7)
+sumar(10.5,21) */
+/* let numero = parseInt (prompt("Igrese un numero: "))
 
 if(numero === 1000){
     alert("El numero ingresado es 1000")
@@ -23,31 +173,7 @@ if(numero1 >= 50 && numero1<=100) {
 }
 else{
     alert("el numero ingresado no es correcto")
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 /* Variables */
 
