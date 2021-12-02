@@ -1,4 +1,114 @@
-let repetir = true;
+let producto1 = parseFloat(prompt("Ingrese un numero"))
+const IVA = 1.21
+
+function multiplicarporIVA(producto1, IVA) {
+    return producto1 * IVA
+}
+
+function calculariva(producto1) {
+    console.log(IVA)
+    let productoconIVA = multiplicarporIVA(producto1, IVA)
+    return productoconIVA
+}
+console.log(IVA)
+console.log(producto1)
+console.log(producto1 * (IVA))
+alert((producto1 * (IVA)))
+
+let numero1 = parseFloat(prompt("Ingrese un numero"))
+let numero2 = parseFloat(prompt("Ingrese otro numero"))
+
+function sumar(numero1, numero2) {
+    console.log(numero1 + numero2)
+}
+sumar(numero1, numero2)
+
+
+/* class Banco {
+    constructor(credito, banco, cuota, ) {
+        this.credito = credito;
+        this.banco = banco;
+        this.cuota = cuota;
+    }
+
+    calcularCuotas() {
+        let cuotas = this.calcularPrestamo(this.banco, this.credito) / this.cuota
+        return cuotas
+    };
+
+    calcularPrestamo(banco, credito) {
+        let interes;
+        switch (banco) {
+            case "santander":
+                interes = 1.20;
+                break;
+            case "macro":
+                interes = 1.30;
+                break;
+            case "provincia":
+                interes = 1.70;
+                break;
+            case "nacion":
+                interes = 1.50;
+                break;
+            case "galicia":
+                interes = 2.20;
+                break;
+            default:
+                console.log("banco no esta");
+        }
+        return credito * interes;
+    }
+}
+function capturar() {
+let creditoCapturar = parseInt(prompt('ingrese monto de credito'));
+let bancoCapturar = prompt('ingrese su banco').toLowerCase();
+let cuotaCapturar = parseInt(prompt('ingrese la cantidad de cuotas'));
+
+const nuevoCredito = new Banco(creditoCapturar, bancoCapturar, cuotaCapturar);
+const cliente2 = new Banco(35000, "macro", 12)
+
+    agregar(nuevoCredito, cliente2);
+}
+
+
+function agregar(cliente, usuario) {
+
+    console.log('sus cuotas seran de : $' + cliente.calcularCuotas())
+
+    console.log('sus cuotas seran de : $' + usuario.calcularCuotas())
+
+}; 
+capturar()  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let repetir = true;
 let acumulador = 0;
 let cantidadNotas =0;
 
@@ -40,88 +150,7 @@ while(ingreso != "ESC"){
 
     }
     ingreso = prompt("Ingresar un nombre");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 /* let nombre = prompt("Ingrese su nombre:")
 while(nombre = "Nicolas")
 {
@@ -142,7 +171,8 @@ switch(nombre)
 
 }
 }
-/* /* function su *//* mar(numero1, numero2){
+/* /* function su */
+/* mar(numero1, numero2){
     console.log(numero1 + numero2)
 }
 sumar(1,4)
@@ -231,5 +261,3 @@ if (1 === "1")
 estrictamente distinto de: 
 
 if (1 !== "1") */
-
-
