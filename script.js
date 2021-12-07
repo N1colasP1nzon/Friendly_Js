@@ -1,4 +1,66 @@
-let producto1 = parseFloat(prompt("Ingrese un numero"))
+class TiendaGolocinas {
+
+    constructor(nombre, apellido, edad, peso, altura, marca, precio, color, stock){
+    this.nombre = nombre
+    this.apellido = apellido
+    this.edad = edad
+    this.peso = peso
+    this.altura = altura
+    this.marca = marca
+    this.precio = precio
+    this.color = color
+    this.stock = stock
+    this.saludar = () => console.log (`¿Que se dice parce, como vamos? Soy ${this.nombre}`)
+    this.dulces =() => console.log (`me gustan el ${this.marca}`)
+    }
+}
+const persona1 = new TiendaGolocinas("Nicolas", "Pinzon", 25, 84, 1.85)
+const persona2 = new TiendaGolocinas("Alejandro", "Naranjo", 27, 80, 1.75)
+const persona3 = new TiendaGolocinas(prompt("Ingrese un Nombre"), prompt("Ingrese un apellido"), parseInt(prompt("Ingrese su Edad")), parseFloat(prompt("Ingrese su peso")), parseFloat(prompt("Ingrese su altura")))
+
+persona1.saludar()
+persona2.saludar()
+persona3.saludar()
+
+const producto1 = new TiendaGolocinas("Chocolate", 120, "Roja", 100)
+
+producto1.dulces()
+/* console.log(producto1.stock)
+producto1.aumentarStock(50)
+console.log(producto1.stock)
+producto1.disminuirStock(30)
+console.log(producto1.stock)  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let producto1 = parseFloat(prompt("Ingrese un numero"))
 const IVA = 1.21
 
 function multiplicarporIVA(producto1, IVA) {
@@ -21,7 +83,7 @@ let numero2 = parseFloat(prompt("Ingrese otro numero"))
 function sumar(numero1, numero2) {
     console.log(numero1 + numero2)
 }
-sumar(numero1, numero2)
+sumar(numero1, numero2) */
 
 
 /* class Banco {
