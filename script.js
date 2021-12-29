@@ -1,20 +1,126 @@
-class Cliente {
+class Suscripcion {
+    constructor(nombre, apellido, dni, email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.email = email;
+    }
+}
+
+let suscripciones = []
+
+$(() => {
+    $('#formSuscripcion').submit((e) => {
+        e.preventDefault()
+
+        let suscripcion = new Suscripcion($('#nombre').val(), $('#apellido').val(), $('#dni').val(), $('#email').val())
+        suscripciones.push(suscripcion)
+
+        localStorage.setItem('suscripcionesKey', JSON.stringify(suscripciones))
+        $('#formSuscripcion').trigger("reset") 
+    })
+
+    $('#boton1').on('click', () => {
+        $('#divSuscripcion').html(`
+        
+        <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Dni</th>
+            <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+            
+        </tbody>
+    </table>
+        `)
+
+        let suscripcionesStorage = JSON.parse(localStorage.getItem('suscripcionesKey'))
+
+        suscripcionesStorage.forEach((suscripcionEnArray, indice) => {
+            $('#table-body').append(`
+                <tr class="table-dark" id="suscripcion${indice}">
+                    <th scope="row">${indice + 1}</th>
+                    <td>${suscripcionEnArray.nombre}</td>
+                    <td>${suscripcionEnArray.apellido}</td>
+                    <td>${suscripcionEnArray.dni}</td>
+                    <td>${suscripcionEnArray.email}</td>
+                </tr>
+            `)
+        });
+
+    })
+
+
+    $('#inputId').change(() => {
+        console.log("Estos son los autos comprados")
+    })
+
+    $('#botonBoton').click(() => {
+        $('#inputId').trigger("change")
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  class Cliente {
     constructor(nombre, apellido, dni, email,) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.email = email;
     
-    }
-
-   /*  incrementarSueldo(dineroAIncrementar) {
-        this.sueldo += dineroAIncrementar;
-    }
-
-    decrementarSueldo(dineroADecrementar) {
-        this.sueldo -= dineroADecrementar;
     } */
-}
+
+/*  incrementarSueldo(dineroAIncrementar) {
+     this.sueldo += dineroAIncrementar;
+ }
+
+ decrementarSueldo(dineroADecrementar) {
+     this.sueldo -= dineroADecrementar;
+ } */
+/* } */
+/* 
 
 let clientes;
 let formCliente = document.getElementById('formCliente')
@@ -26,10 +132,10 @@ if(localStorage.getItem('clientes')) {
     clientes = JSON.parse(localStorage.getItem('clientes'))
 } else {
     clientes = []
-}
+} */
 
 //Obtengo informacion del formulario 
-formCliente.addEventListener('submit', (e) => {
+/* formCliente.addEventListener('submit', (e) => {
     e.preventDefault()
 
     let nombreCliente = document.getElementById("nombre").value
@@ -38,17 +144,19 @@ formCliente.addEventListener('submit', (e) => {
     let emailCliente = document.getElementById("email").value
    /*  let sueldoCliente = document.getElementById("sueldo").value */
 
-    let objetoCliente = new Cliente(nombreCliente, apellidoCliente, dniCliente, emailCliente, /* sueldoCliente */)
-    
-    clientes.push(objetoCliente)
+/* let objetoCliente = new Cliente(nombreCliente, apellidoCliente, dniCliente, emailCliente, */
+/* sueldoCliente */
+/* ) */
+
+/*     clientes.push(objetoCliente)
 
     localStorage.setItem('clientes', JSON.stringify(clientes))
 
-    formCliente.reset()
-})
+    formCliente.reset() */
+/* }) */
 
 //Muestro informacion del storage a traves de un boton
-document.getElementById('botonClientes').addEventListener('click', () => {
+/* document.getElementById('botonClientes').addEventListener('click', () => {
     let clientesStorage = JSON.parse(localStorage.getItem('clientes'))
 
     if(divClientes.children.length == 0) {
@@ -65,10 +173,10 @@ document.getElementById('botonClientes').addEventListener('click', () => {
                 </div>
             
             `
-        }) 
+        })  */
 
-        //Añado el evento eliminar a las cards
-        clientesStorage.forEach((clienteArray, indice) => {
+//Añado el evento eliminar a las cards
+/*         clientesStorage.forEach((clienteArray, indice) => {
             document.getElementById(`boton${indice}`).addEventListener('click', () => {
                 document.getElementById(`cliente${indice}`).remove()
                 clientes.splice(indice, 1)
@@ -81,39 +189,7 @@ document.getElementById('botonClientes').addEventListener('click', () => {
         parrafoError.innerText = "Por favor deje de dar click a el boton Suscribirse como cliente"
     }
 
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}) */
 /* let boton = document.getElementById("boton1")
 let botonInput = document.getElementById("botonInput")
 let inputColor = document.getElementById("inputColor")
@@ -162,8 +238,8 @@ botonProducotos.addEventListener('click', () => {
         </div>
         
         ` */
-        /*         console.log(autoEnArray)
-                console.log(indice) */
+/*         console.log(autoEnArray)
+        console.log(indice) */
 /*     })
 }) */
 
